@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人信息</title>
+	<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    form {
+        margin: 20px auto;
+        width: 300px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+function validateForm() {
+        const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+	const ID=document.getElementById("IDnumber").value;
+	const school = document.getElementById("school").value;
+	const telephone = document.getElementById("telephone").value;
+	const volunteer1 = document.getElementById("volunteer1").value;
+	const volunteer2 = document.getElementById("volunteer2").value;
+	const volunteer3 = document.getElementById("volunteer3").value;
+  if (name == "") {
+    alert("姓名输入有误，请重新输入");
+    return false;
+  }
+  if (age.length>3||age<=0) {
+    alert("年龄输入有误，请重新输入");
+    return false;
+  }
+  if (ID.length==18) {
+    alert("身份证号输入有误，请重新输入");
+    return false;
+  }
+  if (telephone== "") {
+    alert("电话输入有误，请重新输入");
+    return false;
+  }
+   if (volunteer1== "") {
+    alert("志愿不能为空，请重新输入");
+    return false;
+  }
+if (volunteer2== "") {
+    alert("志愿不能为空，请重新输入");
+    return false;
+  }
+if (volunteer3== "") {
+    alert("志愿不能为空，请重新输入");
+    return false;
+  }
+
+  return true;
+}
+</script>
+</head>
+<body>
+<div class="box5">
+	<h1>中国人民解放军火箭军军征兵登记</h1>
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" required>
+    <label for="age">年龄：</label>
+    <input type="text"  id="age" name="age" required>
+     <label for="IDnumber">身份证号：</label>
+    <input type="text" id="IDnumber" name="IDnumber" required>
+        <label for="school">学校：</label>
+    <input type="text" id="school" name="school" required>
+    <label for="telephone">电话：</label>
+    <input type="text" id="telephone" name="telephone" required>
+    <h5>你可以填写三个志愿</h5>
+    <label for="volunteer1">志愿一：</label>
+    <input id="message1" name="volunteer1" required>
+    <label for="volunteer2">志愿二：</label>
+    <input id="message2" name="volunteer2" required>
+    <label for="volunteer3">志愿三：</label>
+    <input id="message3" name="volunteer3" required><br>
+  <input type="submit" value="Submit">
+</form>
+	<p>掌控雷霆，铸就神箭——加入火箭军，成为国家的利剑！</p>
+	<p>精确定位，决胜千里——火箭军，让每一次发射都精准无比！</p>
+	<p>科技强军，智领未来——火箭军，探索最前沿的国防科技！</p>
+	<p>"星火燎原，势不可挡——火箭军，点燃你的战斗激情！</p>
+	<p>"铸剑为犁，守护家园——火箭军，用智慧与力量构筑和平盾牌！</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国人民解放军征兵登记网</title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #slider {
+            width: 50%;
+            max-width: 400px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+			display: flex;
+        }
+
+        #slider img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slider img.active {
+            opacity: 1;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="box4">
+	<ul class="vertical-menu">
+    <li>空军风采</li>
+    <li>陆军风采</li>
+    <li>海军风采</li>
+    <li>火箭军风采</li>
+</ul>
+	<img src="3.jpg" alt="Your Image" width="400" height="300">
+    <div id="slider">
+         <img src="24.jpg" alt="Image 1" class="active">
+        <img src="37.jpg" alt="Image 2"class="active">
+        <img src="38.jpg" alt="Image 3">
+		<img src="39.jpg" alt="Image 4">
+		<img src="40.jpg" alt="Image 5">
+        <img src="41.jpg" alt="Image 6">
+        <img src="42.jpg" alt="Image 7">
+		<img src="43.jpg" alt="Image 8">
+		<img src="44.jpg" alt="Image 9">
+        <img src="45.jpg" alt="Image 10">
+        <img src="46.jpg" alt="Image 11">
+		<img src="47.jpg" alt="Image 12">
+		<img src="48.jpg" alt="Image 13">
+           </div>  
+	<p>水面舰艇</p>
+
+<p>水面舰艇部队，是海军的基本作战兵力，是航空母舰、巡洋舰、驱逐舰、护卫舰艇、布雷舰、扫雷舰艇、登陆舰艇、猎潜艇、导弹艇、鱼雷艇等战斗舰艇部队和勤务舰船部队的总称。
+</p>
+<p>舰队核心——航空母舰</p>
+<p>在航空母舰问世将近百年之际，辽宁舰的正式服役标志着中国实现了航母“零”的突破，向着海上强国的目标迈出了重要一步。</p>
+<p>中国海军第一艘航母——辽宁舰。</p>
+<p>主力舰种——驱逐舰</p>
+
+<p>现代海军中一种多用途的军舰。装备有防空、对舰和反潜武器，广泛的作战职能使得驱逐舰成为海军中最重要的舰种之一。</p>
+<p>051C型驱逐舰——115沈阳舰。</p>
+<p>攻防兼备——护卫舰</p>
+<p>护卫舰的吨位和火力仅次于驱逐舰，它是当代世界各国建造数量最多、分布最广、参战机会最多的一种中型水面舰艇。</p>
+<p>“近海利器”056型轻型护卫舰——582蚌埠舰。</p>
+<p>以小博大——导弹快艇</p>
+<p>导弹快艇是以反舰导弹为主要武器，用于近海作战的小型战斗舰艇，它已经取代了过去鱼雷快艇在水面作战中的角色。</p>
+<p>022型隐形导弹艇</p>
+<p>“拆弹部队”——扫雷舰</p>
+<p>扫雷舰专门用来清扫海中的水雷，以保护船只航行与航道安全，一般属于二线作战舰艇。</p>
+	<p>081型扫雷舰——810靖江舰。</p>
+<p>从海上进攻——登陆舰（艇）</p>
+<p>登陆舰（艇）也叫做两栖舰艇，是为输送登陆兵员、武器装备及补给品登陆而专门制造的舰艇。</p>
+<p>071型船坞登陆舰——998昆仑山舰。</p>
+<p>军舰“保姆”——补给舰</p>
+<p>主要用于向航母战斗编队、舰船供应所需的燃油、弹药、食品、备件等补给品，具有综合的保障和补给能力</p>
+<p>903A型综合补给舰——890巢湖舰。</p>
+<p>“和平方舟”——医院船</p>
+<p>大型医院船具有远海医疗救护能力，可在大规模灾害之际提供紧急救援，是现代海军的重要标志之一。我国海军目前仅有一艘医院船“和平方舟”，医疗设备配置相当于国内三级甲等医院水平。</p>
+<p>超万吨级大型专业医院船——和平方舟医院船。</p>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('slider');
+            const images = Array.from(slider.getElementsByTagName('img'));
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = index;
+                images[currentIndex].classList.add('active');
+            }
+
+            // 初始显示第一张图片
+            showImage(currentIndex);
+
+            // 设置定时器，每隔3秒切换到下一张图片
+            setInterval(function() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                showImage(nextIndex);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

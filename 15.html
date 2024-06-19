@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>个人信息</title>
+	<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    form {
+        margin: 20px auto;
+        width: 300px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+<script>
+function validateForm() {
+        const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+	const ID=document.getElementById("IDnumber").value;
+	const educationalbackground = document.getElementById("educationalbackground").value;
+	const school = document.getElementById("school").value;
+	const Major = document.getElementById("Major").value;
+	const telephone = document.getElementById("telephone").value;
+  if (name == "") {
+    alert("姓名输入有误，请重新输入");
+    return false;
+  }
+  if (age.length>3||age<=0) {
+    alert("年龄输入有误，请重新输入");
+    return false;
+  }
+  if (ID.length==18) {
+    alert("身份证号输入有误，请重新输入");
+    return false;
+  }
+  if (telephone== "") {
+    alert("电话输入有误，请重新输入");
+    return false;
+  }
+
+  return true;
+}
+</script>
+</head>
+<body>
+<div class="box6">
+	<h1>中国人民解放军军事航天部队征兵登记</h1>
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" required>
+    <label for="age">年龄：</label>
+    <input type="text"  id="age" name="age" required>
+     <label for="IDnumber">身份证号：</label>
+    <input type="text" id="IDnumber" name="IDnumber" required>
+        <label for="school">学校：</label>
+    <input type="text" id="school" name="school" required>
+	<label for="educationalbackground">学历：</label>
+    <input type="text" id="educationalbackground" name="educationalbackground" required>
+    <label for="Major">专业：</label>
+    <input type="text" id="Major" name="Major" required>
+    <label for="telephone">电话：</label>
+    <input type="text" id="telephone" name="telephone" required><br>
+  <input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

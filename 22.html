@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国人民解放军征兵登记网</title>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #slider {
+            width: 50%;
+            max-width: 400px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+			display: flex;
+        }
+
+        #slider img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slider img.active {
+            opacity: 1;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div class="box5">
+	<ul class="vertical-menu">
+    <li>空军风采</li>
+    <li>陆军风采</li>
+    <li>海军风采</li>
+    <li>火箭军风采</li>
+</ul>
+	<img src="4.jpg" alt="Your Image" width="400" height="300">
+    <div id="slider">
+         <img src="49.jpg" alt="Image 1" class="active">
+        <img src="50.jpg" alt="Image 2"class="active">
+        <img src="51.jpg" alt="Image 3">
+		<img src="52.jpg" alt="Image 4">
+		<img src="53.jpg" alt="Image 5">
+           </div>  
+	<p>东风-16中程弹道导弹</p>
+
+<p>东风-16中程弹道导弹是一种单级固体弹道导弹。东风-16继承了东风-11的成熟技术，在弹道导弹的射程上填补了东风-15和东风-21的空白，与之前的东风-15、东风-11近程弹道导弹和东风-21中程弹道导弹构成了中国的常规弹道导弹体系。
+</p>
+<p>东风-26</p>
+<p>2015年9月3日，在北京天安门前举行的纪念中国人民抗日战争暨世界反法西斯战争胜利70周年阅兵式中，新型远程弹道导弹东风-26首次亮相。这型导弹能够大区域无依托机动发射，可实施快速核反击，能对陆上重要目标和海上大中型舰船实施常规中远程精确打击，是我军核常通用、全域慑战的新型杀手锏武器。</p>
+<p>东风-21D </p>
+<p>东风-21D中程反舰弹道导弹精确度高、变轨能力强、突防能力好、机动能力强。有媒体分析认为，东风-21D将会作为中国“反介入”能力中的一种关键装备，提高中国对远海的控制能力。
+</p>
+
+<p>东风15B </p>
+<p>这型导弹具有快速打击、连续突击、高效毁伤能力，是我军实施中近程精确打击的“尖兵利器”。
+
+东风-15B 弹道导弹是东风-15导弹的改进型，是一种两级、固体燃料、近程战术弹道导弹。在2015年9月3日阅兵中亮相，也曾参加1999年国庆阅兵式上展示。
+
+
+
+东风-5B   携带多枚核弹头、可攻击数个目标图片
+作为中国洲际导弹的开山鼻祖，东风-5洲际导弹已经为祖国值班多年，东风-5B洲际导弹是东风-5的改良型，其最大的改进在于拥有了分导能力，这代表着东风-5B洲际导弹作战性能大大增强。
+</p>
+<p>长剑-10A巡航导弹 </p>
+<p>长剑-10A巡航导弹具备超低空隐身突防、多模式复合制导、多角度连续攻击能力，命中精度高、杀伤威力大，是我军精确打击、克敌制胜的主战装备。
+
+长剑-10A巡航导弹依靠先进的传感器来寻找、识别并定位目标，通过通信系统向指挥部发送定位信息，能够精确打击有价值的地面目标。</p>
+
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('slider');
+            const images = Array.from(slider.getElementsByTagName('img'));
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = index;
+                images[currentIndex].classList.add('active');
+            }
+
+            // 初始显示第一张图片
+            showImage(currentIndex);
+
+            // 设置定时器，每隔3秒切换到下一张图片
+            setInterval(function() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                showImage(nextIndex);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
