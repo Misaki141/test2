@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 1500px;
+    height: 2200px;
+    background-color: #3FF;
+    margin: 10px;
+}
+.box1 {
+	width: 1500px;
+	height: 2000px;
+	background-color: #0F0;
+	margin: 10px;
+	text-align: center;
+}
+.box2 {
+	width: 1500px;
+	height: 2000px;
+	background-color: #FF0;
+	margin: 10px;
+}
+.box3 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #F0F;
+    margin: 10px;
+}
+.box4 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #09F;
+    margin: 10px;
+}
+.box5 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #C6F;
+    margin: 10px;
+}
+.box6 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #60F;
+    margin: 10px;
+}
+.box7 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #6F9;
+    margin: 10px;
+}
+.box8 {
+    width: 1500px;
+    height: 2000px;
+    background-color: #3FF;
+    margin: 10px;
+}.box3 h1 {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
+/* 重置列表样式 */
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 清除浮动 */
+    background-color:#F004D3; /* 背景颜色 */
+}
+
+/* 导航项设置为行内块，以便它们并排显示 */
+.nav-bar li {
+    float: left;
+}
+
+/* 设置导航链接的样式 */
+.nav-bar li a {
+    display: inline-block;
+    color:#F1F50D;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 鼠标悬停时的颜色变化 */
+.nav-bar li a:hover {
+    background-color:#F9080F;
+    color: black;
+}
+.vertical-menu {
+    list-style-type: none; /* 移除列表项前的默认标记 */
+    padding: 0; /* 移除内边距 */
+    margin: 0; /* 移除外边距 */
+}
+
+.vertical-menu li {
+    border-bottom: 1px solid #ddd; /* 底部边框 */
+    padding: 5px; /* 内边距 */
+}
+
+.vertical-menu li a {
+    text-decoration: none; /* 去除下划线 */
+    color:yellow; /* 文本颜色 */
+    display: block; /* 使链接填满整个列表项 */
+}
+
+.vertical-menu li a:hover {
+    background-color:red; /* 鼠标悬停时的背景色变化
+    color: black; /* 鼠标悬停时的文本颜色变化 */
+}
